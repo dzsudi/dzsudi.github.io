@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/pages/products.html">Products</a>
+        </li>
+        <li>
+            <a href="/pages/orders.html">Orders</a>
+        </li>
+        <li>
+            <a href="/about.html">About</a>
+        </li>
+    </ul>
+    <h1> Orders </h1>
+    <a href="pages/products.html">products</a>
+    <!--ez nem működik, mert az ordesr az a pages-en belül van, és mivel nincs perjel (ez csak relatív), ezért már eleve a pages-en belül keresi, és még egy pages-t hozzátesz - az ORDERS FELŐL NÉZI-->
+    <a href="/pages/products.html">products2</a>
+    <!--ez már jó lesz, mert itt a root-ból keresi az elérést A DOMAIN GYÖKERÉTŐL NÉZI AZ URL-T -->
+</body>
+
+</html>

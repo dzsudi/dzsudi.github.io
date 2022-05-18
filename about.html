@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/pages/products.html">Products</a>
+        </li>
+        <li>
+            <a href="/pages/orders.html">Orders</a>
+        </li>
+        <li>
+            <a href="/about.html">About</a>
+        </li>
+    </ul>
+    <h1> about </h1>
+    <a href="index.html">Home</a>
+    <!-- "href "" attribútumban adom meg, hogy hová szeretnék menni. beírhatom a teljes címet is (http://127.0.0.1:550/index.html) -> ABSZOLÚT URL, vagy elég az index is RELATÍV URL, mert ugyanazon a szerveren vannak ugyanabban a mappában-->
+    <a href="http://127.0.0.1:5500/index.html">Home2</a>
+    <!--a realtív a fájlokat egymáshoz képest adja meg; hasznos, ha máshová költözik az egész oldal, mert nem kell módosítgatni, hiszen a belső viszonyok változatlanok maradnak -->
+    <a href="/index.html">Home3</a> <!-- root URL; mindig a domain névtől nézi a címet-->
+
+    <table> <!--táblázat: strukturált adatokhoz használjuk-->
+        <caption>Opening hours</caption> <!--adhatok a táblázatnak címet-->
+        <thead> <!--fejléc elem: itt mondom meg, mik vannak a különböző oszlopokban, belül TR és TH elemek-->
+            <tr>
+                <th>Day</th>
+                <th>Open</th>
+                <th>Close</th>
+            </tr>
+        </thead>
+        <tbody> <!--a táblázathoz ha van fejléc, akkor kell bele test is (body), az oszlop a fejléc, a bodyban vannak az adatok, ilyenkor meg is formázza-->
+            <tr> <!--sorok eleme tr (table row), cellák eleme td, az adatok a td-ben vannak, első sor-->
+                <td>Monday-Friday</td>
+                <td>09:00</td>
+                <td rowspan="2">21:00</td> <!--ez a cella "rányújtózik" az alatta lévő cellára is, mert 2 "magas" lesz (span=nyújtás) sorok összevonása-->
+            </tr>
+            <tr> <!--második sor-->
+                <td>Saturday</td>
+                <td>10:00</td>
+            
+            </tr>
+            <tr> <!--harmadik sor-->
+                <td>Sunday</td>
+                <td colspan="2">Closed</td> <!--itt is "nyújtózik" - ez a cella 2 oszlop széles lett, ezzel lehet oszlopot összevonni -->
+            </tr>
+        </tbody>
+        <tfoot> <!--lábléc, itt meg lehet adni neki valami szöveget, ebbe is kell tr és td, hogy alulra kerüljön a szövege (amúgy fentre teszi)-->
+            <tr>
+                <td colspan="3"> <!--több is lehet, mint 2, a táblázat sor-oszlop számainak függvényében-->
+                    &copy 2019
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
